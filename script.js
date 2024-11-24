@@ -1,13 +1,10 @@
-const contribution = 12000;
-const houseCost = 13500;
-const rate = 0.07;
-const result = contribution * (1 + rate / 12) ** 24;
+const verification = prompt(`Подтвердите, что вы не робот. Введите сумму или разность чисел 7 и 15`)
 
-console.log(result);
-
-if (result > 13500){
-    console.log(`Он сможет купить дом у него останется. ${result - houseCost}$`);
-    console.log(`у него останется ${result - houseCost}$`);
-} else{
-    console.log("ему не хватит денег");
+switch(true){
+    case Number(verification) === 22:
+    case Number(verification) === -8:
+    case verification === "Я не робот!":
+            console.log("Успех!"); 
+            break;
+     default: console.log("Вы робот!")
 }
